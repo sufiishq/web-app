@@ -23,19 +23,31 @@ jobs:
         with:
           java-version: '12.x'
           
+      # Note: This workflow uses the latest stable version of the Dart SDK.
+      # You can specify other versions if desired, see documentation here:
+      # https://github.com/dart-lang/setup-dart/blob/main/README.md
+      # - uses: dart-lang/setup-dart@v1
+      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+      
+      - name: Write compile time firebase_options.dart file
+        env:
+          FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS_DART }}
+        run: echo $FIREBASE_OPTIONS | base64 -d > lib/firebase_options.dart
+        
       # Include the flutter action
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'  
 
-      - name: Get flutter
+      - name: Get flutter dependencies
         run: flutter pub get
-     
-      - name: Write compile time firebase_options.dart file
-        env:
-          FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS_DART }}
-        run: echo $FIREBASE_OPTIONS > lib/firebase_options.dart
-      
+
+      - name: Check for any formatting issues in the code.
+        run: flutter format --set-exit-if-changed .
+    
+      - name: Statically analyze the Dart code for any errors.
+        run: flutter analyze .
+
       - name: Run flutter test
         run: flutter test
         
