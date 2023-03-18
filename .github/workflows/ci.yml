@@ -18,11 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1 
       
-      # The flutter action needs java so include it
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '12.x'
-      
       - name: Write compile time firebase_options.dart file
         env:
           FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS_DART }}
