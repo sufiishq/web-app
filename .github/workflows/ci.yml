@@ -51,10 +51,13 @@ jobs:
         run: dart analyze .
 
       - name: Run flutter test
-        run: flutter test
+        run: flutter test --coverage
         
       - name: Build
         run: flutter build web
         
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          run:  curl -s https://codecov.io/bash
