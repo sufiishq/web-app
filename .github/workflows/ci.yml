@@ -31,6 +31,11 @@ jobs:
       - name: Get flutter
         run: flutter pub get
      
+      - name: Write compile time firebase_options.dart file
+        env:
+          FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS_DART }}
+        run: echo $FIREBASE_OPTIONS > lib/firebase_options.dart
+      
       - name: Run flutter test
         run: flutter test
         
