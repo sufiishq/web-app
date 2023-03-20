@@ -12,24 +12,27 @@ dependencies:
   cached_network_image: ^3.2.1
   package_info_plus:
   flutter_svg: ^1.1.6
+  floor:
   flutter_lints:
   intl: ^0.17.0
 dev_dependencies:
+  floor_generator:
+  build_runner:
   flutter_test:
     sdk: flutter
+
 flutter:
   uses-material-design: true
   assets:
     - assets/
     - assets/images/
-    - assets/json/
-    fonts:
-      - family: Ubuntu
-        fonts:
-          - asset: assets/fonts/ubuntu_r.ttf
-            weight: 300
-          - asset: assets/fonts/ubuntu_m.ttf
-            weight: 500
-          - asset: assets/fonts/ubuntu_b.ttf
-            weight: 700
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/ubuntu_r.ttf
+          weight: 300
+        - asset: assets/fonts/ubuntu_m.ttf
+          weight: 500
+        - asset: assets/fonts/ubuntu_b.ttf
+          weight: 700
 
