@@ -12,21 +12,21 @@ class AppRoutes {
   static List<GetPage> pages = [
     GetPage(
       name: splashScreen,
-      page: () => SplashScreen(),
+      page: () => const SplashScreen(),
       bindings: [
         SplashBinding(),
       ],
     ),
     GetPage(
       name: homeScreen,
-      page: () => HomeScreen(),
+      page: () => const HomeScreen(),
       bindings: [
         HomeBinding(),
       ],
     ),
     GetPage(
       name: initialRoute,
-      page: () => SplashScreen(),
+      page: () => const SplashScreen(),
       bindings: [
         SplashBinding(),
       ],
