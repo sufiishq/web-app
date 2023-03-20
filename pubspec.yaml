@@ -22,3 +22,14 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/json/
+    fonts:
+      - family: Ubuntu
+        fonts:
+          - asset: assets/fonts/ubuntu_r.ttf
+            weight: 300
+          - asset: assets/fonts/ubuntu_m.ttf
+            weight: 500
+          - asset: assets/fonts/ubuntu_b.ttf
+            weight: 700
+
