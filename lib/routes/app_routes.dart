@@ -7,7 +7,7 @@ import '../presentation/home_screen/binding/home_binding.dart';
 class AppRoutes {
   static const String splashScreen = '/splash_screen';
   static const String homeScreen = '/home_screen';
-  static String initialRoute = '/initialRoute';
+  static String initialRoute = '/initial_route';
 
   static List<GetPage> pages = [
     GetPage(

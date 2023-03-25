@@ -9,25 +9,23 @@ class SplashScreen extends GetWidget<SplashController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-            color: ColorConstant.whiteA700,
-            child: Stack(alignment: Alignment.center, children: [
-              const Center(
-                child: Text(
-                  "Sufi Ishq",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ),
-              Positioned(
-                  bottom: 5,
-                  left: 0,
-                  right: 0,
-                  child: Obx(() => Text(
-                        "Version: ${controller.appVersion.value}",
-                        textAlign: TextAlign.center,
-                      )))
-            ])),
+        body: Stack(alignment: Alignment.center, children: [
+          Center(
+            child: Text(
+              'lbl_sufi_ishq'.tr,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Positioned(
+              bottom: 5,
+              left: 0,
+              right: 0,
+              child: Obx(() => Text(
+                    "Version: ${controller.appVersion.value}",
+                    textAlign: TextAlign.center,
+                  )))
+        ]),
       ),
     );
   }

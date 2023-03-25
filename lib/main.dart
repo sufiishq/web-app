@@ -10,12 +10,12 @@ void main() {
     DeviceOrientation.portraitUp,
   ]).then((value) {
     Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
-    runApp(const MyApp());
+    runApp(const SufiIshqApp());
   });
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class SufiIshqApp extends StatelessWidget {
+  const SufiIshqApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       translations: AppLocalization(),
       locale: Get.deviceLocale, //for setting localization strings
       fallbackLocale: const Locale('en', 'US'),
-      title: 'sufi Ishq',
+      title: 'lbl_sufi_ishq'.tr,
       initialBinding: InitialBindings(),
       initialRoute: AppRoutes.initialRoute,
       getPages: AppRoutes.pages,

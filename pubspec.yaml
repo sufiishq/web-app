@@ -6,18 +6,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.6.5
-  connectivity_plus: ^2.3.6
-  shared_preferences: ^2.0.15
-  cached_network_image: ^3.2.1
+
+  get:
+  connectivity_plus:
+  shared_preferences:
+  drift:
   package_info_plus:
-  flutter_svg: ^1.1.6
+  flutter_svg:
   floor:
   flutter_lints:
-  intl: ^0.17.0
+  intl:
+
 dev_dependencies:
-  floor_generator:
-  build_runner:
   flutter_test:
     sdk: flutter
 
@@ -29,8 +29,10 @@ flutter:
   fonts:
     - family: Ubuntu
       fonts:
-        - asset: assets/fonts/ubuntu_r.ttf
+        - asset: assets/fonts/ubuntu_l.ttf
           weight: 300
+        - asset: assets/fonts/ubuntu_r.ttf
+          weight: 400
         - asset: assets/fonts/ubuntu_m.ttf
           weight: 500
         - asset: assets/fonts/ubuntu_b.ttf
