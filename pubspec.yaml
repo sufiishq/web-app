@@ -16,6 +16,7 @@ dependencies:
   floor:
   flutter_lints:
   intl:
+  firebase_core: ^2.8.0
 
 dev_dependencies:
   flutter_test:
