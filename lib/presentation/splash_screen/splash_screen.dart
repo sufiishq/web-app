@@ -17,14 +17,6 @@ class SplashScreen extends GetWidget<SplashController> {
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          Positioned(
-              bottom: 5,
-              left: 0,
-              right: 0,
-              child: Obx(() => Text(
-                    "Version: ${controller.appVersion.value}",
-                    textAlign: TextAlign.center,
-                  )))
         ]),
       ),
     );

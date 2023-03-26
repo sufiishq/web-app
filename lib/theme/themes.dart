@@ -4,7 +4,6 @@ class Themes {
   static final light = ThemeData.light().copyWith(
     useMaterial3: true,
     visualDensity: VisualDensity.standard,
-
     cardColor: const Color(0xFF121313),
     primaryColor: const Color(0xFF383838),
     backgroundColor: const Color(0xFF2C2C2C),
