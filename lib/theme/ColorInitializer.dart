@@ -14,29 +14,28 @@ enum ColorInitializer {
   onError
 }
 
-validateForeground(bgColor,context){
-  switch (bgColor){
+validateForeground(bgColor, context) {
+  switch (bgColor) {
     case ColorInitializer.primary:
     case ColorInitializer.primaryContainer:
     case ColorInitializer.secondary:
     case ColorInitializer.secondaryContainer:
     case ColorInitializer.surface:
     case ColorInitializer.background:
-      return getForegroundColor(bgColor,context);
+      return getForegroundColor(bgColor, context);
     default:
       return throw Exception("Invalid Theme Color");
   }
 }
-
-validateBackground(bgColor,context){
-  switch (bgColor){
+validateBackground(bgColor, context) {
+  switch (bgColor) {
     case ColorInitializer.primary:
     case ColorInitializer.primaryContainer:
     case ColorInitializer.secondary:
     case ColorInitializer.secondaryContainer:
     case ColorInitializer.surface:
     case ColorInitializer.background:
-      return getBackgroundColor(bgColor,context);
+      return getBackgroundColor(bgColor, context);
     default:
       return throw Exception("Invalid Theme Color");
   }

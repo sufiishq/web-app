@@ -9,6 +9,7 @@ import 'controller/dashboard_controller.dart';
 
 class DashboardScreen extends GetWidget<DashboardController> {
   final Responsive responsive = Responsive();
+
   DashboardScreen({Key? key}) : super(key: key);
 
   @override
@@ -23,21 +24,23 @@ class DashboardScreen extends GetWidget<DashboardController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                    color: validateBackground(ColorInitializer.background,context),
+                    color: validateBackground(
+                        ColorInitializer.background, context),
                     child: SideMenu()),
                 const Expanded(
                   child: HomeScreen(),
                 ),
                 Container(
                   width: responsive.setWidth(30),
-                  color: validateBackground(ColorInitializer.background,context),
+                  color:
+                      validateBackground(ColorInitializer.background, context),
                 ),
               ],
             ),
           ),
           Container(
             height: responsive.setHeight(10),
-           color: validateBackground(ColorInitializer.background,context),
+            color: validateBackground(ColorInitializer.background, context),
           ),
         ],
       )),

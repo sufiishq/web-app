@@ -19,7 +19,8 @@ class Themes {
       surface: Color(0xFFEFF2F3),
     ),
     textTheme: const TextTheme(
-      bodySmall: TextStyle(fontSize: 16.0, fontFamily: 'Ubuntu', fontWeight: FontWeight.w400),
+      bodySmall: TextStyle(
+          fontSize: 16.0, fontFamily: 'Ubuntu', fontWeight: FontWeight.w400),
     ),
   );
 
@@ -41,7 +42,8 @@ class Themes {
       surface: Color(0xFF121313),
     ),
     textTheme: const TextTheme(
-      bodySmall: TextStyle(fontSize: 16.0, fontFamily: 'Ubuntu', fontWeight: FontWeight.w400),
+      bodySmall: TextStyle(
+          fontSize: 16.0, fontFamily: 'Ubuntu', fontWeight: FontWeight.w400),
     ),
   );
 }

@@ -42,7 +42,8 @@ class SideMenuItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: validateForeground(ColorInitializer.background, context),
+                        color: validateForeground(
+                            ColorInitializer.background, context),
                       ),
                     ),
                   )

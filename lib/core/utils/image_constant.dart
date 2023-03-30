@@ -1,5 +1,4 @@
 class ImageConstant {
-
   static String imgEvents = 'images/events.png';
   static String imgGallery = 'images/gallery.png';
   static String imgHelp = 'images/help.png';

@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:sufi_ishq/core/app_export.dart';
 import 'controller/home_controller.dart';
-import 'package:flutter/material.dart';
 
 class HomeScreen extends GetWidget<HomeController> {
   const HomeScreen({Key? key}) : super(key: key);
