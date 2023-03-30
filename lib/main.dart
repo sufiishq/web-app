@@ -29,10 +29,9 @@ class SufiIshqApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: Themes.light,
       darkTheme: Themes.dark,
-      // Use dark or light theme based on system setting.
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       translations: AppLocalization(),
-      locale: Get.deviceLocale, //for setting localization strings
+      locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
       title: 'lbl_sufi_ishq'.tr,
       initialBinding: InitialBindings(),

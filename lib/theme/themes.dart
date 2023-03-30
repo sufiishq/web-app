@@ -4,7 +4,7 @@ class Themes {
   static final light = ThemeData.light().copyWith(
     useMaterial3: true,
     colorScheme: const ColorScheme(
-      background: Color(0xFF2C2C2C),
+      background: Color(0xFFFCFCFC),
       brightness: Brightness.light,
       error: Colors.white,
       onBackground: Color(0xFF2B2C2E),

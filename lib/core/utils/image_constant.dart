@@ -10,4 +10,5 @@ class ImageConstant {
   static String imgShijra = 'images/shijra.png';
   static String imgTasbih = 'images/tasbih.png';
   static String imgThemes = 'images/themes.png';
+  static String imgCaligraphi = 'images/caligraphi.png';
 }

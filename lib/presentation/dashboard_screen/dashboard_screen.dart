@@ -23,22 +23,21 @@ class DashboardScreen extends GetWidget<DashboardController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                    color: getBackgroundColor(ColorInitializer.background,context),
-                    width: responsive.setWidth(15),
+                    color: validateBackground(ColorInitializer.background,context),
                     child: SideMenu()),
                 const Expanded(
                   child: HomeScreen(),
                 ),
                 Container(
                   width: responsive.setWidth(30),
-                  color: getBackgroundColor(ColorInitializer.background,context),
+                  color: validateBackground(ColorInitializer.background,context),
                 ),
               ],
             ),
           ),
           Container(
             height: responsive.setHeight(10),
-           color: getBackgroundColor(ColorInitializer.background,context),
+           color: validateBackground(ColorInitializer.background,context),
           ),
         ],
       )),
