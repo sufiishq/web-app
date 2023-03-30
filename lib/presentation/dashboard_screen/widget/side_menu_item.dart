@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:sufi_ishq/presentation/dashboard_screen/controller/dashboard_controller.dart';
 import '../../../../core/app_export.dart';
 import '../../../theme/ColorInitializer.dart';
 
 // ignore: must_be_immutable
 class SideMenuItem extends StatelessWidget {
-  SideMenuItem(this.onTap, this.title, this.image,this.pos,{Key? key}) : super(key: key);
+  SideMenuItem(this.onTap, this.title, this.image, this.pos, {Key? key})
+      : super(key: key);
   VoidCallback onTap;
   String title;
   String image;
@@ -28,19 +28,25 @@ class SideMenuItem extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(25, 15, 8, 15),
-              child: Image.asset(image,width:24, height:24,),
-            ),
-
-            Obx(() => controller.showItemText.value?Padding(
-              padding: const EdgeInsets.fromLTRB(8, 15, 15, 15),
-              child: Text(
-                title,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.left,
-                style: TextStyle( color: validateForeground(ColorInitializer.background,context),),
+              child: Image.asset(
+                image,
+                width: 24,
+                height: 24,
               ),
-            ):Container()),
-
+            ),
+            Obx(() => controller.showItemText.value
+                ? Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 15, 15, 15),
+                    child: Text(
+                      title,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: validateForeground(ColorInitializer.background, context),
+                      ),
+                    ),
+                  )
+                : Container()),
           ],
         ),
       ),

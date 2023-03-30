@@ -8,13 +8,14 @@ class DashboardController extends GetxController {
   RxBool isDrawerOpen = true.obs;
   RxBool showItemText = true.obs;
   Rx<int> selectedIndex = 0.obs;
-  final focusNodes = List.generate(DummyContent.arrOfSideMenu.length, (index) => FocusNode());
+  final focusNodes =
+      List.generate(DummyContent.arrOfSideMenu.length, (index) => FocusNode());
 
-  openCloseDrawer(){
-    if(isDrawerOpen.value){
+  openCloseDrawer() {
+    if (isDrawerOpen.value) {
       isDrawerOpen.value = false;
       showItemText.value = false;
-    }else{
+    } else {
       isDrawerOpen.value = true;
       Future.delayed(const Duration(milliseconds: 400), () {
         showItemText.value = true;
@@ -22,10 +23,8 @@ class DashboardController extends GetxController {
     }
   }
 
-  updateIteIndex(index){
+  updateIteIndex(index) {
     selectedIndex.value = index;
     focusNodes[index].requestFocus();
   }
 }
-
-
