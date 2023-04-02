@@ -20,9 +20,7 @@ class Themes {
     ),
     textTheme: const TextTheme(
       bodySmall: TextStyle(
-          fontSize: 16.0,
-          fontFamily: 'Ubuntu',
-          fontWeight: FontWeight.w400),
+          fontSize: 16.0, fontFamily: 'Ubuntu', fontWeight: FontWeight.w400),
     ),
   );
 
@@ -45,9 +43,7 @@ class Themes {
     ),
     textTheme: const TextTheme(
       bodySmall: TextStyle(
-          fontSize: 16.0,
-          fontFamily: 'Ubuntu',
-          fontWeight: FontWeight.w400),
+          fontSize: 16.0, fontFamily: 'Ubuntu', fontWeight: FontWeight.w400),
     ),
   );
 }
