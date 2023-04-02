@@ -27,6 +27,7 @@ validateForeground(bgColor, context) {
       return throw Exception("Invalid Theme Color");
   }
 }
+
 validateBackground(bgColor, context) {
   switch (bgColor) {
     case ColorInitializer.primary:
