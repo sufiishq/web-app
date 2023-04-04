@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sufi_ishq/core/app_export.dart';
+import 'package:sufi_ishq/core/utils/constant.dart';
 import 'package:sufi_ishq/presentation/dashboard_screen/controller/dashboard_controller.dart';
-import '../../../../core/app_export.dart';
-import '../../../theme/ColorInitializer.dart';
+import 'package:sufi_ishq/theme/color_initializer.dart';
 
 // ignore: must_be_immutable
 class SideMenuItem extends StatelessWidget {
@@ -19,8 +20,8 @@ class SideMenuItem extends StatelessWidget {
       child: InkWell(
         autofocus: true,
         focusNode: controller.focusNodes[pos],
-        splashColor: validateBackground(ColorInitializer.secondary, context),
-        highlightColor: validateBackground(ColorInitializer.secondary, context),
+        splashColor: getBackgroundColor(ColorInitializer.secondary, context),
+        highlightColor: getBackgroundColor(ColorInitializer.secondary, context),
         onTap: onTap,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,8 +31,8 @@ class SideMenuItem extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(25, 15, 8, 15),
               child: Image.asset(
                 image,
-                width: 24,
-                height: 24,
+                width: Constant.menuIconSize,
+                height: Constant.menuIconSize,
               ),
             ),
             Obx(() => controller.showItemText.value
@@ -42,7 +43,8 @@ class SideMenuItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: validateForeground(
+                        fontWeight: FontWeight.bold,
+                        color: getForegroundColor(
                             ColorInitializer.background, context),
                       ),
                     ),

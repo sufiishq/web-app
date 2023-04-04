@@ -1,6 +1,6 @@
 import '../app_export.dart';
 
-class DummyContent {
+class MainNavigation {
   static List<SideMenuModel> arrOfSideMenu = [
     SideMenuModel(id: 1, title: "lbl_home".tr, image: ImageConstant.imgHome),
     SideMenuModel(
@@ -22,8 +22,8 @@ class DummyContent {
 }
 
 class SideMenuModel {
-  int? id;
-  String? title;
-  String? image;
-  SideMenuModel({this.id, this.title, this.image});
+  int id;
+  String title;
+  String image;
+  SideMenuModel({required this.id, required this.title, required this.image});
 }

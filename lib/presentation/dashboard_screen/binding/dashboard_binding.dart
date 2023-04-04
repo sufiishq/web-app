@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import '../controller/dashboard_controller.dart';
+import 'package:sufi_ishq/presentation/dashboard_screen/controller/dashboard_controller.dart';
 
 class DashboardBinding extends Bindings {
   @override

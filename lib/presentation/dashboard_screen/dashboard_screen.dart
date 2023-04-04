@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:sufi_ishq/core/app_export.dart';
+import 'package:sufi_ishq/core/utils/constant.dart';
+import 'package:sufi_ishq/core/utils/responsive.dart';
+import 'package:sufi_ishq/presentation/dashboard_screen/controller/dashboard_controller.dart';
 import 'package:sufi_ishq/presentation/dashboard_screen/widget/side_menu.dart';
 import 'package:sufi_ishq/presentation/home_screen/home_screen.dart';
-import '../../core/utils/responsive.dart';
-import '../../theme/ColorInitializer.dart';
-import 'controller/dashboard_controller.dart';
+import 'package:sufi_ishq/theme/color_initializer.dart';
 
 class DashboardScreen extends GetWidget<DashboardController> {
   final Responsive responsive = Responsive();
@@ -24,23 +25,23 @@ class DashboardScreen extends GetWidget<DashboardController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                    color: validateBackground(
+                    color: getBackgroundColor(
                         ColorInitializer.background, context),
                     child: SideMenu()),
                 const Expanded(
                   child: HomeScreen(),
                 ),
                 Container(
-                  width: responsive.setWidth(30),
+                  width: Constant.rightTabBarWidth,
                   color:
-                      validateBackground(ColorInitializer.background, context),
+                      getBackgroundColor(ColorInitializer.background, context),
                 ),
               ],
             ),
           ),
           Container(
-            height: responsive.setHeight(10),
-            color: validateBackground(ColorInitializer.background, context),
+            height: responsive.setHeight(Constant.playerHeight),
+            color: getBackgroundColor(ColorInitializer.background, context),
           ),
         ],
       )),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'constant.dart';
+
 class Responsive {
-  double? blockSizeHorizontal;
-  double? blockSizeVertical;
-  double? textRatio;
+  late double? blockSizeHorizontal;
+  late double? blockSizeVertical;
+  late double? textRatio;
 
   setContext(context) {
     double width = MediaQuery.of(context).size.width;
@@ -22,14 +24,14 @@ class Responsive {
   }
 
   double setTextScale(val) {
-    return 1.0 * val;
+    return Constant.textScaleSize * val;
   }
 
   double setFormLabelWidth() {
-    return setWidth(2);
+    return setWidth(Constant.formLabelWidth);
   }
 
   double setFormLabelHeight() {
-    return setHeight(2);
+    return setHeight(Constant.formLabelWidth);
   }
 }
