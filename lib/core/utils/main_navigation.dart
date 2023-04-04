@@ -1,4 +1,4 @@
-import '../app_export.dart';
+import 'package:sufi_ishq/core/app_export.dart';
 
 class MainNavigation {
   static List<SideMenuModel> arrOfSideMenu = [

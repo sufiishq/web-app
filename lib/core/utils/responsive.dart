@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
-import 'constant.dart';
+import 'package:sufi_ishq/core/utils/constant.dart';
 
 class Responsive {
-  late double? blockSizeHorizontal;
-  late double? blockSizeVertical;
-  late double? textRatio;
+  late double blockSizeHorizontal;
+  late double blockSizeVertical;
+  late double textRatio;
 
   setContext(context) {
     double width = MediaQuery.of(context).size.width;
@@ -16,11 +15,11 @@ class Responsive {
   }
 
   double setWidth(val) {
-    return blockSizeHorizontal! * val;
+    return blockSizeHorizontal * val;
   }
 
   double setHeight(val) {
-    return blockSizeVertical! * val;
+    return blockSizeVertical * val;
   }
 
   double setTextScale(val) {
