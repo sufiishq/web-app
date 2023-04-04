@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sufi_ishq/core/app_export.dart';
-import 'controller/splash_controller.dart';
+import 'package:sufi_ishq/presentation/splash_screen/controller/splash_controller.dart';
 
 class SplashScreen extends GetWidget<SplashController> {
   const SplashScreen({
@@ -18,7 +18,7 @@ class SplashScreen extends GetWidget<SplashController> {
             child: Text(
               'lbl_sufi_ishq'.tr,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
         ]),

@@ -1,11 +1,13 @@
 class ImageConstant {
-  static String imgArrowLeft = 'assets/images/img_arrowleft.svg';
-
-  static String img = 'assets/images/img_.png';
-
-  static String imgPlus = 'assets/images/img_plus.svg';
-
-  static String imgSearch = 'assets/images/img_search.svg';
-
-  static String imageNotFound = 'assets/images/image_not_found.png';
+  static const String imgEvents = 'images/events.png';
+  static const String imgGallery = 'images/gallery.png';
+  static const String imgHelp = 'images/help.png';
+  static const String imgHome = 'images/home.png';
+  static const String imgCassette = 'images/cassette.png';
+  static const String imgLocation = 'images/location.png';
+  static const String imgSetting = 'images/setting.png';
+  static const String imgShijra = 'images/shijra.png';
+  static const String imgTasbih = 'images/tasbih.png';
+  static const String imgThemes = 'images/themes.png';
+  static const String imgCaligraphi = 'images/caligraphi.png';
 }

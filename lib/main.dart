@@ -2,9 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sufi_ishq/core/app_export.dart';
+import 'package:sufi_ishq/firebase_options.dart';
 import 'package:sufi_ishq/theme/themes.dart';
-import 'core/app_export.dart';
-import 'firebase_options.dart';
 
 void main() async {
   await Firebase.initializeApp(
@@ -28,8 +28,9 @@ class SufiIshqApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: Themes.light,
       darkTheme: Themes.dark,
+      themeMode: ThemeMode.light,
       translations: AppLocalization(),
-      locale: Get.deviceLocale, //for setting localization strings
+      locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
       title: 'lbl_sufi_ishq'.tr,
       initialBinding: InitialBindings(),
