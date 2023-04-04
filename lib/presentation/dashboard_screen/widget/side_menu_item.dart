@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sufi_ishq/core/app_export.dart';
 import 'package:sufi_ishq/core/utils/constant.dart';
 import 'package:sufi_ishq/presentation/dashboard_screen/controller/dashboard_controller.dart';
+import 'package:sufi_ishq/theme/app_style.dart';
 import 'package:sufi_ishq/theme/color_initializer.dart';
 
 // ignore: must_be_immutable
@@ -38,16 +39,12 @@ class SideMenuItem extends StatelessWidget {
             Obx(() => controller.showItemText.value
                 ? Padding(
                     padding: const EdgeInsets.fromLTRB(8, 15, 15, 15),
-                    child: Text(
-                      title,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: getForegroundColor(
-                            ColorInitializer.background, context),
-                      ),
-                    ),
+                    child: Text(title,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.left,
+                        style: AppStyle.txtUbuntuRegular16w500.copyWith(
+                            color: getForegroundColor(
+                                ColorInitializer.background, context))),
                   )
                 : Container()),
           ],

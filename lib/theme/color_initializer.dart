@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 enum ColorInitializer {
   primary,
@@ -25,8 +26,7 @@ getForegroundColor(ColorInitializer bgColor, context) {
     ColorInitializer.background: colorScheme.onBackground,
   };
   return fgColorMap[bgColor] ??
-      (throw ArgumentError(
-          'bgColor is not a valid background color checkout ColorInitializer enum class.'));
+      (throw ArgumentError('lbl_color_initializer_error'.tr));
 }
 
 getBackgroundColor(ColorInitializer bgColor, context) {

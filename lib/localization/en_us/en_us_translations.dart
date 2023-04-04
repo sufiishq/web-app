@@ -15,4 +15,6 @@ final Map<String, String> enUs = {
   "lbl_add": "Add",
   "lbl_back": "Back",
   "lbl_search": "Search",
+  "lbl_color_initializer_error":
+      "bgColor is not a valid background color checkout ColorInitializer enum class.",
 };
