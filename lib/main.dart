@@ -28,7 +28,7 @@ class SufiIshqApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: Themes.light,
       darkTheme: Themes.dark,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       translations: AppLocalization(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),

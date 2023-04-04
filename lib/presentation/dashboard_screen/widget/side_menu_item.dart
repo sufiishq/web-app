@@ -17,38 +17,36 @@ class SideMenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: InkWell(
-        autofocus: true,
-        focusNode: controller.focusNodes[pos],
-        splashColor: getBackgroundColor(ColorInitializer.secondary, context),
-        highlightColor: getBackgroundColor(ColorInitializer.secondary, context),
-        onTap: onTap,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(25, 15, 8, 15),
-              child: Image.asset(
-                image,
-                width: Constant.menuIconSize,
-                height: Constant.menuIconSize,
-              ),
+    return InkWell(
+      autofocus: true,
+      focusNode: controller.focusNodes[pos],
+      splashColor: getBackgroundColor(ColorInitializer.secondary, context),
+      highlightColor: getBackgroundColor(ColorInitializer.secondary, context),
+      onTap: onTap,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(25, 15, 8, 15),
+            child: Image.asset(
+              image,
+              width: Constant.menuIconSize,
+              height: Constant.menuIconSize,
             ),
-            Obx(() => controller.showItemText.value
-                ? Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 15, 15, 15),
-                    child: Text(title,
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.left,
-                        style: AppStyle.txtUbuntuRegular16w500.copyWith(
-                            color: getForegroundColor(
-                                ColorInitializer.background, context))),
-                  )
-                : Container()),
-          ],
-        ),
+          ),
+          Obx(() => controller.showItemText.value
+              ? Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 15, 15, 15),
+                  child: Text(title,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.left,
+                      style: AppStyle.txtUbuntuRegular16w500.copyWith(
+                          color: getForegroundColor(
+                              ColorInitializer.background, context))),
+                )
+              : Container()),
+        ],
       ),
     );
   }
