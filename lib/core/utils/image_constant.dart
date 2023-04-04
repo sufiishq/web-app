@@ -10,4 +10,5 @@ class ImageConstant {
   static const String imgTasbih = 'images/tasbih.png';
   static const String imgThemes = 'images/themes.png';
   static const String imgCaligraphi = 'images/caligraphi.png';
+  static const String imgHpLogo = 'images/hp_logo.png';
 }

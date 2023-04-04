@@ -47,7 +47,6 @@ class SideMenu extends StatelessWidget {
                     Obx(() => controller.showItemText.value
                         ? Image.asset(
                             ImageConstant.imgCaligraphi,
-                            width: Constant.imageCaligraphiWidth,
                             height: Constant.imageCaligraphiHeight,
                           )
                         : Container(
