@@ -27,21 +27,24 @@ class ThemeToggle extends StatelessWidget {
             ],
           ),
         ),
-        Obx(() => SlideTransition(
-            position: controller.animation,
-            child: Container(
-              decoration: BoxDecoration(
-                color: getBackgroundColor(ColorInitializer.secondary, context),
-                borderRadius: BorderRadius.circular(3.0),
-              ),
-              width: Constant.themeToggleSize,
-              height: Constant.themeToggleSize,
-            ))),
+        controller.animationController != null
+            ? SlideTransition(
+                position: controller.animation!,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color:
+                        getBackgroundColor(ColorInitializer.secondary, context),
+                    borderRadius: BorderRadius.circular(3.0),
+                  ),
+                  width: Constant.themeToggleSize,
+                  height: Constant.themeToggleSize,
+                ))
+            : Container(),
         Row(
           children: [
             InkWell(
               onTap: () {
-                controller.animationController.forward();
+                controller.animationController!.forward();
                 controller.isLightTheme.value = true;
                 Get.changeThemeMode(
                   controller.isLightTheme.value
@@ -67,7 +70,7 @@ class ThemeToggle extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                controller.animationController.reverse();
+                controller.animationController!.reverse();
                 controller.isLightTheme.value = false;
                 Get.changeThemeMode(
                   controller.isLightTheme.value

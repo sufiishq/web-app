@@ -11,7 +11,6 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          width: double.maxFinite,
           color: getBackgroundColor(ColorInitializer.surface, context),
           child: Column(
             children: [

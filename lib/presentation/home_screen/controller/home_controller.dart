@@ -8,8 +8,8 @@ class HomeController extends GetxController
     with GetSingleTickerProviderStateMixin {
   RxBool isLightTheme = false.obs;
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-  late AnimationController animationController;
-  late Animation<Offset> animation;
+  AnimationController? animationController;
+  Animation<Offset>? animation;
 
   @override
   Future<void> onReady() async {
@@ -23,7 +23,7 @@ class HomeController extends GetxController
       begin: const Offset(1, 0),
       end: const Offset(0, 0),
     ).animate(CurvedAnimation(
-      parent: animationController,
+      parent: animationController!,
       curve: Curves.easeInToLinear,
     ));
   }
@@ -40,7 +40,7 @@ class HomeController extends GetxController
     isLightTheme.value = await isLight.value;
     Get.changeThemeMode(isLightTheme.value ? ThemeMode.light : ThemeMode.dark);
     isLightTheme.value
-        ? animationController.forward()
-        : animationController.reverse();
+        ? animationController!.forward()
+        : animationController!.reverse();
   }
 }
