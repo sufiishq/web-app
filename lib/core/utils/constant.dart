@@ -1,6 +1,6 @@
 class Constant {
   static const int formLabelWidth = 2;
-  static const int drawerDuration = 200;
+  static const int duration = 200;
 
   static const double appBarDivider = 2;
   static const double appBarHeight = 60;
@@ -13,6 +13,8 @@ class Constant {
   static const double menuIconSize = 24;
   static const double imageCaligraphiHeight = 50;
   static const double imageHpHeight = 40;
+  static const double themeToggleSize = 60;
+  static const double themeToggleWidth = 120;
 
   static const String fontUbuntu = "Ubuntu";
 }

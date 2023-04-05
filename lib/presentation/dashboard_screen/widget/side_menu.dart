@@ -15,7 +15,7 @@ class SideMenu extends StatelessWidget {
           child: AnimatedSize(
             alignment: Alignment.centerLeft,
             curve: Curves.ease,
-            duration: const Duration(milliseconds: Constant.drawerDuration),
+            duration: const Duration(milliseconds: Constant.duration),
             child: SizedBox(
               width: controller.isDrawerOpen.value
                   ? Constant.drawerExpandedWidth
