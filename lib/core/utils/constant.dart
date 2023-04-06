@@ -10,10 +10,11 @@ class Constant {
   static const double rightTabBarWidth = 450;
   static const double drawerExpandedWidth = 220;
   static const double drawerCollapseWidth = 70;
-  static const double menuIconSize = 24;
+  static const double menuIconSize24 = 24;
   static const double imageCaligraphiHeight = 50;
   static const double imageHpHeight = 40;
-  static const double themeToggleSize = 60;
+  static const double themeToggleSize0 = 0;
+  static const double themeToggleSize60 = 60;
   static const double themeToggleWidth = 120;
 
   static const String fontUbuntu = "Ubuntu";

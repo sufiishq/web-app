@@ -31,8 +31,8 @@ class SideMenuItem extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(25, 15, 8, 15),
             child: Image.asset(
               image,
-              width: Constant.menuIconSize,
-              height: Constant.menuIconSize,
+              width: Constant.menuIconSize24,
+              height: Constant.menuIconSize24,
             ),
           ),
           Obx(() => controller.showItemText.value

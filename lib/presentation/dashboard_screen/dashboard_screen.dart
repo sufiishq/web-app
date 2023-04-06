@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sufi_ishq/core/app_export.dart';
 import 'package:sufi_ishq/core/utils/constant.dart';
 import 'package:sufi_ishq/core/utils/responsive.dart';
-import 'package:sufi_ishq/presentation/dashboard_screen/widget/custom_app_bar.dart';
+import 'package:sufi_ishq/presentation/dashboard_screen/widget/home_app_bar.dart';
 import 'package:sufi_ishq/presentation/dashboard_screen/widget/side_menu.dart';
 import 'package:sufi_ishq/presentation/home_screen/home_screen.dart';
 import 'package:sufi_ishq/theme/color_initializer.dart';
@@ -19,7 +19,7 @@ class DashboardScreen extends StatelessWidget {
       child: Scaffold(
           body: Column(
         children: [
-          GetPlatform.isMobile ? CustomAppBar() : Container(),
+          GetPlatform.isMobile ? HomeAppBar() : Container(),
           Expanded(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,

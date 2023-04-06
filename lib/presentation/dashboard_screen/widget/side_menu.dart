@@ -40,7 +40,7 @@ class SideMenu extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(25, 30, 21, 30),
                             child: Icon(
                               Icons.menu,
-                              size: Constant.menuIconSize,
+                              size: Constant.menuIconSize24,
                             )),
                       ),
                       Obx(() => controller.showItemText.value

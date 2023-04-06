@@ -14,7 +14,7 @@ class ThemeToggle extends StatelessWidget {
       children: [
         Container(
           width: Constant.themeToggleWidth,
-          height: Constant.themeToggleSize,
+          height: Constant.themeToggleSize60,
           decoration: BoxDecoration(
             color: getBackgroundColor(ColorInitializer.background, context),
             borderRadius: BorderRadius.circular(3.0),
@@ -27,24 +27,27 @@ class ThemeToggle extends StatelessWidget {
             ],
           ),
         ),
-        controller.animationController != null
-            ? SlideTransition(
-                position: controller.animation!,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color:
-                        getBackgroundColor(ColorInitializer.secondary, context),
-                    borderRadius: BorderRadius.circular(3.0),
-                  ),
-                  width: Constant.themeToggleSize,
-                  height: Constant.themeToggleSize,
-                ))
-            : Container(),
+        Obx(() => AnimatedSize(
+              duration: const Duration(milliseconds: Constant.duration),
+              curve: Curves.linear,
+              child: Container(
+                decoration: BoxDecoration(
+                  color:
+                      getBackgroundColor(ColorInitializer.secondary, context),
+                  borderRadius: BorderRadius.circular(3.0),
+                ),
+                margin: EdgeInsets.only(
+                    left: controller.isLightTheme.value
+                        ? Constant.themeToggleSize0
+                        : Constant.themeToggleSize60),
+                width: Constant.themeToggleSize60,
+                height: Constant.themeToggleSize60,
+              ),
+            )),
         Row(
           children: [
             InkWell(
               onTap: () {
-                controller.animationController!.forward();
                 controller.isLightTheme.value = true;
                 Get.changeThemeMode(
                   controller.isLightTheme.value
@@ -54,23 +57,20 @@ class ThemeToggle extends StatelessWidget {
                 controller.saveThemeStatus();
               },
               child: SizedBox(
-                width: Constant.themeToggleSize,
-                height: Constant.themeToggleSize,
+                width: Constant.themeToggleSize60,
+                height: Constant.themeToggleSize60,
                 child: Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(17),
                   child: Image.asset(
                     ImageConstant.imgDay,
-                    width: Constant.menuIconSize,
-                    height: Constant.menuIconSize,
-                    color: getForegroundColor(
-                        ColorInitializer.background, context),
+                    color:
+                        getForegroundColor(ColorInitializer.secondary, context),
                   ),
                 ),
               ),
             ),
             InkWell(
               onTap: () {
-                controller.animationController!.reverse();
                 controller.isLightTheme.value = false;
                 Get.changeThemeMode(
                   controller.isLightTheme.value
@@ -80,14 +80,12 @@ class ThemeToggle extends StatelessWidget {
                 controller.saveThemeStatus();
               },
               child: SizedBox(
-                width: Constant.themeToggleSize,
-                height: Constant.themeToggleSize,
+                width: Constant.themeToggleSize60,
+                height: Constant.themeToggleSize60,
                 child: Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(17),
                   child: Image.asset(
                     ImageConstant.imgNight,
-                    width: Constant.menuIconSize,
-                    height: Constant.menuIconSize,
                     color: getForegroundColor(
                         ColorInitializer.background, context),
                   ),

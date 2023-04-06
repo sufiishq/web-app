@@ -4,8 +4,8 @@ import 'package:sufi_ishq/core/utils/constant.dart';
 import 'package:sufi_ishq/presentation/dashboard_screen/controller/dashboard_controller.dart';
 import 'package:sufi_ishq/theme/color_initializer.dart';
 
-class CustomAppBar extends StatelessWidget {
-  CustomAppBar({Key? key}) : super(key: key);
+class HomeAppBar extends StatelessWidget {
+  HomeAppBar({Key? key}) : super(key: key);
   final DashboardController controller = Get.find<DashboardController>();
 
   @override
@@ -20,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
                     padding: EdgeInsets.only(left: 25),
                     child: Icon(
                       Icons.info_outlined,
-                      size: Constant.menuIconSize,
+                      size: Constant.menuIconSize24,
                     )),
                 Expanded(
                     child: Image.asset(
@@ -33,7 +33,7 @@ class CustomAppBar extends StatelessWidget {
                     padding: EdgeInsets.only(right: 25),
                     child: Icon(
                       Icons.more_vert_outlined,
-                      size: Constant.menuIconSize,
+                      size: Constant.menuIconSize24,
                     ))
               ]),
             ),
