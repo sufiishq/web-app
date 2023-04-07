@@ -27,22 +27,19 @@ class ThemeToggle extends StatelessWidget {
             ],
           ),
         ),
-        Obx(() => AnimatedSize(
+        Obx(() => AnimatedContainer(
               duration: const Duration(milliseconds: Constant.duration),
               curve: Curves.linear,
-              child: Container(
-                decoration: BoxDecoration(
-                  color:
-                      getBackgroundColor(ColorInitializer.secondary, context),
-                  borderRadius: BorderRadius.circular(3.0),
-                ),
-                margin: EdgeInsets.only(
-                    left: controller.isLightTheme.value
-                        ? Constant.themeToggleSize0
-                        : Constant.themeToggleSize60),
-                width: Constant.themeToggleSize60,
-                height: Constant.themeToggleSize60,
+              decoration: BoxDecoration(
+                color: getBackgroundColor(ColorInitializer.secondary, context),
+                borderRadius: BorderRadius.circular(3.0),
               ),
+              margin: EdgeInsets.only(
+                  left: controller.isLightTheme.value
+                      ? Constant.themeToggleSize0
+                      : Constant.themeToggleSize60),
+              width: Constant.themeToggleSize60,
+              height: Constant.themeToggleSize60,
             )),
         Row(
           children: [
@@ -60,7 +57,7 @@ class ThemeToggle extends StatelessWidget {
                 width: Constant.themeToggleSize60,
                 height: Constant.themeToggleSize60,
                 child: Padding(
-                  padding: const EdgeInsets.all(17),
+                  padding: const EdgeInsets.all(15),
                   child: Image.asset(
                     ImageConstant.imgDay,
                     color:
@@ -83,7 +80,7 @@ class ThemeToggle extends StatelessWidget {
                 width: Constant.themeToggleSize60,
                 height: Constant.themeToggleSize60,
                 child: Padding(
-                  padding: const EdgeInsets.all(17),
+                  padding: const EdgeInsets.all(15),
                   child: Image.asset(
                     ImageConstant.imgNight,
                     color: getForegroundColor(

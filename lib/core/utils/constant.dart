@@ -14,8 +14,8 @@ class Constant {
   static const double imageCaligraphiHeight = 50;
   static const double imageHpHeight = 40;
   static const double themeToggleSize0 = 0;
-  static const double themeToggleSize60 = 60;
-  static const double themeToggleWidth = 120;
+  static const double themeToggleSize60 = 55;
+  static const double themeToggleWidth = 110;
 
   static const String fontUbuntu = "Ubuntu";
 }
