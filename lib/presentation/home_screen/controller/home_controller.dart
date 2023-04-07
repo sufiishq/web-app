@@ -6,7 +6,7 @@ import 'package:sufi_ishq/core/utils/pref_utils.dart';
 
 class HomeController extends GetxController {
   RxBool isLightTheme = false.obs;
-
+  Rx<double> width = 0.0.obs;
   @override
   Future<void> onReady() async {
     super.onReady();

@@ -1,6 +1,7 @@
 class Constant {
   static const int formLabelWidth = 2;
   static const int duration = 200;
+  static const int mobileSize = 600;
 
   static const double appBarDivider = 2;
   static const double appBarHeight = 60;
