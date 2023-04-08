@@ -1,20 +1,10 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sufi_ishq/core/app_export.dart';
 
 class PrefUtils {
-  static SharedPreferences? _sharedPreferences;
+  static var storage = Get.find<SharedPreferences>();
 
-  PrefUtils() {
-    SharedPreferences.getInstance().then((value) {
-      _sharedPreferences = value;
-    });
-  }
-
-  Future<void> init() async {
-    _sharedPreferences ??= await SharedPreferences.getInstance();
-  }
-
-  ///will clear all the data stored in preference
-  void clearPreferencesData() async {
-    _sharedPreferences?.clear();
+  static Future<void> clearLocalStorage() async {
+    storage.clear();
   }
 }

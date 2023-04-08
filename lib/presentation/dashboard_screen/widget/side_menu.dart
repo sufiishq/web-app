@@ -11,27 +11,27 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() => AnimatedSize(
-          alignment: Alignment.centerLeft,
-          curve: Curves.ease,
-          duration: const Duration(milliseconds: Constant.drawerDuration),
-          child: SizedBox(
-            width: controller.isDrawerOpen.value
-                ? Constant.drawerExpandedWidth
-                : Constant.drawerCollapseWidth,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Material(
-                      child: InkWell(
-                        hoverColor: getBackgroundColor(
-                            ColorInitializer.background, context),
+    return Obx(() => Material(
+          child: AnimatedSize(
+            alignment: Alignment.centerLeft,
+            curve: Curves.ease,
+            duration: const Duration(milliseconds: Constant.duration),
+            child: SizedBox(
+              width: controller.isDrawerOpen.value
+                  ? Constant.drawerExpandedWidth
+                  : Constant.drawerCollapseWidth,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      InkWell(
                         splashColor: getBackgroundColor(
+                            ColorInitializer.secondary, context),
+                        highlightColor: getBackgroundColor(
                             ColorInitializer.secondary, context),
                         onTap: () {
                           controller.toggleDrawer();
@@ -40,34 +40,33 @@ class SideMenu extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(25, 30, 21, 30),
                             child: Icon(
                               Icons.menu,
-                              size: Constant.menuIconSize,
+                              size: Constant.menuIconSize24,
                             )),
                       ),
-                    ),
-                    Obx(() => controller.showItemText.value
-                        ? Image.asset(
-                            ImageConstant.imgCaligraphi,
-                            width: Constant.imageCaligraphiWidth,
-                            height: Constant.imageCaligraphiHeight,
-                          )
-                        : Container(
-                            height: Constant.imageCaligraphiHeight,
-                          )),
-                  ],
-                ),
-                Expanded(
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: controller.arrOfSideMenu.length,
-                    itemBuilder: (context, index) {
-                      return SideMenuItem(() {
-                        controller.updateIteIndex(index);
-                      }, controller.arrOfSideMenu[index].title,
-                          controller.arrOfSideMenu[index].image, index);
-                    },
+                      Obx(() => controller.showItemText.value
+                          ? Image.asset(
+                              ImageConstant.imgCaligraphi,
+                              height: Constant.imageCaligraphiHeight,
+                            )
+                          : Container(
+                              height: Constant.imageCaligraphiHeight,
+                            )),
+                    ],
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: controller.arrOfSideMenu.length,
+                      itemBuilder: (context, index) {
+                        return SideMenuItem(() {
+                          controller.updateIteIndex(index);
+                        }, controller.arrOfSideMenu[index].title,
+                            controller.arrOfSideMenu[index].image, index);
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ));

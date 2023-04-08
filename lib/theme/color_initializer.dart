@@ -33,7 +33,9 @@ getBackgroundColor(ColorInitializer bgColor, context) {
   final colorScheme = Theme.of(context).colorScheme;
   final bgColorMap = {
     ColorInitializer.primary: colorScheme.primary,
+    ColorInitializer.primaryContainer: colorScheme.primaryContainer,
     ColorInitializer.secondary: colorScheme.secondary,
+    ColorInitializer.secondaryContainer: colorScheme.secondaryContainer,
     ColorInitializer.surface: colorScheme.surface,
     ColorInitializer.background: colorScheme.background,
   };

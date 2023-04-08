@@ -8,6 +8,7 @@ class DashboardController extends GetxController {
   RxBool isDrawerOpen = true.obs;
   RxBool showItemText = true.obs;
   Rx<int> selectedIndex = 0.obs;
+  Rx<double> width = 0.0.obs;
   final focusNodes = List.generate(
       MainNavigation.arrOfSideMenu.length, (index) => FocusNode());
 
