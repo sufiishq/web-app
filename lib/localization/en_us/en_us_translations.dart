@@ -6,6 +6,7 @@ final Map<String, String> enUs = {
   'lbl_gallery': 'Gallery',
   'lbl_location': 'Location',
   'lbl_shijra': 'Shijra',
+  'lbl_request_time_out': 'Request time out',
   'lbl_themes': 'Themes',
   'lbl_help': 'Help',
   'lbl_admin_setting': 'Admin Setting',

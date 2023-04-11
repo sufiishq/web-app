@@ -5,7 +5,6 @@ import 'package:sufi_ishq/presentation/home_screen/binding/home_binding.dart';
 import 'package:sufi_ishq/presentation/home_screen/home_screen.dart';
 
 class AppRoutes {
-  static const String splashScreen = '/splash_screen';
   static const String homeScreen = '/home_screen';
   static const String dashboardScreen = '/dashboard_screen';
   static String initialRoute = '/initial_route';
