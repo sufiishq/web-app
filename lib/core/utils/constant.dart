@@ -22,6 +22,9 @@ class Constant {
   static const double space10 = 10;
   static const double space15 = 15;
   static const double space20 = 20;
+  static const double space50 = 50;
 
   static const String fontUbuntu = "Ubuntu";
+  static const String dateFormat = "dd-MM-yyyy";
+  static const String dateFormatForApi = "yyyy-MM-dd";
 }

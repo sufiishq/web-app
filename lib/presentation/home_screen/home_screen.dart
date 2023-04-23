@@ -18,11 +18,6 @@ class HomeScreen extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
             color: getBackgroundColor(ColorInitializer.surface, context),
-           /* image: const DecorationImage(
-              scale: 2,
-              image: AssetImage(ImageConstant.imgPattern),
-              repeat: ImageRepeat.repeat,
-            ),*/
           ),
           child: Column(
             children: [
@@ -38,7 +33,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                     controller.width.value < Constant.mobileSize
                         ? Container()
-                        : Expanded(child: HijriCalender()),
+                        : Expanded(
+                            child: HijriCalender(controller.hijriDateModel)),
                     const SizedBox(
                       width: Constant.space15,
                     ),

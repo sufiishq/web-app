@@ -24,11 +24,9 @@ class SufiIshqApp extends StatefulWidget {
 
   @override
   _SufiIshqAppState createState() => _SufiIshqAppState();
-
 }
 
 class _SufiIshqAppState extends State<SufiIshqApp> {
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

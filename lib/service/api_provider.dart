@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-
 import 'package:get/get_connect/connect.dart';
 import 'package:http/http.dart' as http;
 import 'package:sufi_ishq/core/utils/widget_utils.dart';
@@ -11,8 +10,8 @@ class APIProvider extends GetConnect {
       {successMsg, loading, status}) async {
     http.Response response;
     try {
-      response = await http.get(Uri.parse(url + endpoint), headers: {
-      }).timeout(const Duration(seconds: ApiConstant.requestDuration));
+      response = await http.get(Uri.parse(url + endpoint), headers: {}).timeout(
+          const Duration(seconds: ApiConstant.requestDuration));
 
       if (status != null) {
         return response.statusCode;
