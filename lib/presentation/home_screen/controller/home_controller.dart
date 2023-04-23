@@ -29,10 +29,10 @@ class HomeController extends GetxController {
   }
 
   void callHijriDateApi() async {
-    var value =
-        await _repository.fetchHijriDate(ApiConstant.hijriApiUrl, "08-04-2023");
-    if (!value.isError) {
-      print(value);
-    }
+
+        await _repository.fetchHijriDate(ApiConstant.hijriApiUrl, "08-04-2023").then((value) => {
+        print("farhan response: $value"),
+        });
+
   }
 }

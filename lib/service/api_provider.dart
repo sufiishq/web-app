@@ -12,12 +12,7 @@ class APIProvider extends GetConnect {
     http.Response response;
     try {
       response = await http.get(Uri.parse(url + endpoint), headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE",
-        "Origin": "http://localhost"
       }).timeout(const Duration(seconds: ApiConstant.requestDuration));
-
-      print(response.body);
 
       if (status != null) {
         return response.statusCode;
