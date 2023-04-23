@@ -7,7 +7,6 @@ import 'package:sufi_ishq/presentation/home_screen/home_screen.dart';
 class AppRoutes {
   static const String homeScreen = '/home_screen';
   static const String dashboardScreen = '/dashboard_screen';
-  static String initialRoute = '/initial_route';
 
   static List<GetPage> pages = [
     GetPage(
@@ -24,12 +23,5 @@ class AppRoutes {
         DashboardBinding(),
       ],
     ),
-    GetPage(
-      name: initialRoute,
-      page: () => DashboardScreen(),
-      bindings: [
-        DashboardBinding(),
-      ],
-    )
   ];
 }

@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
             color: getBackgroundColor(ColorInitializer.surface, context),
-            image: const DecorationImage(
+           /* image: const DecorationImage(
               scale: 2,
               image: AssetImage(ImageConstant.imgPattern),
               repeat: ImageRepeat.repeat,
-            ),
+            ),*/
           ),
           child: Column(
             children: [

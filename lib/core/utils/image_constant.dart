@@ -13,5 +13,4 @@ class ImageConstant {
   static const String imgHpLogo = 'images/hp_logo.png';
   static const String imgDay = 'images/day.png';
   static const String imgNight = 'images/night.png';
-  static const String imgPattern = 'images/pattern.png';
 }
