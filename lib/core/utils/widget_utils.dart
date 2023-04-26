@@ -1,7 +1,7 @@
-import 'custom_toast.dart';
+import 'app_toast.dart';
 
 class WidgetUtils {
   static void showToast(String body, bool error) {
-    CustomToast().showToast(body, error);
+    AppToast().showToast(body, error);
   }
 }

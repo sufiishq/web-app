@@ -1,7 +1,7 @@
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sufi_ishq/core/utils/constant.dart';
 
-class CustomToast {
+class AppToast {
   void showToast(String body, bool error) {
     Fluttertoast.showToast(
         msg: body,
