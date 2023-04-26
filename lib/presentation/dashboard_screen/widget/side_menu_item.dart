@@ -41,7 +41,7 @@ class SideMenuItem extends StatelessWidget {
                   child: Text(title,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtUbuntuRegular16w500.copyWith(
+                      style: AppStyle.txtUbuntuRegular14w500.copyWith(
                           color: getForegroundColor(
                               ColorInitializer.background, context))),
                 )

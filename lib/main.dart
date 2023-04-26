@@ -19,9 +19,14 @@ void main() async {
   });
 }
 
-class SufiIshqApp extends StatelessWidget {
+class SufiIshqApp extends StatefulWidget {
   const SufiIshqApp({Key? key}) : super(key: key);
 
+  @override
+  _SufiIshqAppState createState() => _SufiIshqAppState();
+}
+
+class _SufiIshqAppState extends State<SufiIshqApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -34,7 +39,7 @@ class SufiIshqApp extends StatelessWidget {
       fallbackLocale: const Locale('en', 'US'),
       title: 'lbl_sufi_ishq'.tr,
       initialBinding: InitialBindings(),
-      initialRoute: AppRoutes.initialRoute,
+      initialRoute: AppRoutes.dashboardScreen,
       getPages: AppRoutes.pages,
     );
   }

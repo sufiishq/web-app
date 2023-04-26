@@ -1,6 +1,6 @@
 {
-    "name": "sufiishq_webapp",
-    "short_name": "sufiishq_webapp",
+    "name": "Sufi Ishq",
+    "short_name": "Sufi Ishq",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
