@@ -55,13 +55,7 @@ class Hijri {
   String? year;
   Designation? designation;
 
-  Hijri(
-      {date,
-      format,
-      day,
-      month,
-      year,
-      designation});
+  Hijri({date, format, day, month, year, designation});
 
   Hijri.fromJson(Map<String, dynamic> json) {
     date = json['date'];
