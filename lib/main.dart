@@ -13,7 +13,6 @@ void main() async {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]).then((value) {
-
     runApp(const SufiIshqApp());
   });
 }
