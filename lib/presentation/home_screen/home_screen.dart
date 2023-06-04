@@ -1,7 +1,5 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:sufi_ishq/core/app_export.dart';
 import 'package:sufi_ishq/core/utils/constant.dart';
 import 'package:sufi_ishq/presentation/home_screen/controller/home_controller.dart';
