@@ -56,12 +56,12 @@ class Hijri {
   Designation? designation;
 
   Hijri(
-      {this.date,
-      this.format,
-      this.day,
-      this.month,
-      this.year,
-      this.designation});
+      {date,
+      format,
+      day,
+      month,
+      year,
+      designation});
 
   Hijri.fromJson(Map<String, dynamic> json) {
     date = json['date'];

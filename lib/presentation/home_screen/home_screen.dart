@@ -9,6 +9,7 @@ import 'package:sufi_ishq/presentation/home_screen/widget/theme_toggle.dart';
 import 'package:sufi_ishq/theme/color_initializer.dart';
 
 class HomeScreen extends StatelessWidget {
+  HomeScreen({Key? key}) : super(key: key);
   final HomeController controller = Get.put(HomeController());
 
   @override

@@ -35,7 +35,6 @@ class APIProvider extends GetConnect {
       WidgetUtils.showToast('Request time out', true);
       return false;
     } catch (socketException) {
-      print(socketException);
       return false;
     }
   }
