@@ -48,10 +48,12 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                   child: Obx(
                 () => SizedBox(
-                  width:
-                      controller.width.value < Constant.mobileSize ? Constant.imageSizeOnMobile : Constant.imageSizeOnDesktop,
-                  height:
-                      controller.width.value < Constant.mobileSize ? Constant.imageSizeOnMobile : Constant.imageSizeOnDesktop,
+                  width: controller.width.value < Constant.mobileSize
+                      ? Constant.imageSizeOnMobile
+                      : Constant.imageSizeOnDesktop,
+                  height: controller.width.value < Constant.mobileSize
+                      ? Constant.imageSizeOnMobile
+                      : Constant.imageSizeOnDesktop,
                   child: Transform(
                       transform: Matrix4.identity()
                         ..setEntry(3, 2, 0.001)
