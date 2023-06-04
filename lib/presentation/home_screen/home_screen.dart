@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:sufi_ishq/core/app_export.dart';
 import 'package:sufi_ishq/core/utils/constant.dart';
 import 'package:sufi_ishq/presentation/home_screen/controller/home_controller.dart';
@@ -44,6 +47,28 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              Expanded(
+                  child: Obx(
+                () => SizedBox(
+                  width:
+                      controller.width.value < Constant.mobileSize ? Constant.imageSizeOnMobile : Constant.imageSizeOnDesktop,
+                  height:
+                      controller.width.value < Constant.mobileSize ? Constant.imageSizeOnMobile : Constant.imageSizeOnDesktop,
+                  child: Transform(
+                      transform: Matrix4.identity()
+                        ..setEntry(3, 2, 0.001)
+                        ..rotateY(pi * controller.angle.value),
+                      alignment: Alignment.center,
+                      child: Align(
+                          alignment: Alignment.center,
+                          child: Transform(
+                              alignment: Alignment.center,
+                              transform: Matrix4.identity()..rotateY(pi),
+                              child: Image.asset(
+                                ImageConstant.imgLogo,
+                              )))),
+                ),
+              ))
             ],
           ),
         ),

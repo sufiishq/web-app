@@ -1,5 +1,5 @@
+import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -15,12 +15,17 @@ class HomeController extends GetxController {
   Rx<HijriDateModel> hijriDateModel = HijriDateModel().obs;
   RxBool isLightTheme = false.obs;
   Rx<double> width = 0.0.obs;
-
+  Rx<double> angle = 0.0.obs;
   @override
   Future<void> onReady() async {
     super.onReady();
     getThemeStatus();
     checkCurrentDate();
+
+    Timer.periodic(const Duration(milliseconds: Constant.rotateDuration),
+        (timer) {
+      angle.value += 0.01;
+    });
   }
 
   saveThemeStatus() async {

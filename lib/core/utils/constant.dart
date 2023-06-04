@@ -1,5 +1,6 @@
 class Constant {
   static const int formLabelWidth = 2;
+  static const int rotateDuration = 40;
   static const int duration = 200;
   static const int mobileSize = 600;
 
@@ -19,6 +20,8 @@ class Constant {
   static const double themeToggleSize0 = 0;
   static const double themeToggleSize60 = 55;
   static const double themeToggleWidth = 110;
+  static const double imageSizeOnMobile = 400;
+  static const double imageSizeOnDesktop = 600;
   static const double space10 = 10;
   static const double space15 = 15;
   static const double space20 = 20;
