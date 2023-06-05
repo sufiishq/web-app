@@ -12,7 +12,7 @@ dependencies:
   shared_preferences:
   drift:
   fluttertoast:
-  package_info_plus:
+  http:
   flutter_svg:
   floor:
   flutter_lints:

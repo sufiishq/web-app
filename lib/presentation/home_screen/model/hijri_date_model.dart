@@ -55,13 +55,7 @@ class Hijri {
   String? year;
   Designation? designation;
 
-  Hijri(
-      {this.date,
-      this.format,
-      this.day,
-      this.month,
-      this.year,
-      this.designation});
+  Hijri({date, format, day, month, year, designation});
 
   Hijri.fromJson(Map<String, dynamic> json) {
     date = json['date'];
@@ -127,8 +121,8 @@ class Gregorian {
     data['date'] = date;
     data['format'] = format;
     data['day'] = day;
-    if (this.weekday != null) {
-      data['weekday'] = this.weekday!.toJson();
+    if (weekday != null) {
+      data['weekday'] = weekday!.toJson();
     }
     if (month != null) {
       data['month'] = month!.toJson();
@@ -176,8 +170,8 @@ class GregorianMonth {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['number'] = this.number;
-    data['en'] = this.en;
+    data['number'] = number;
+    data['en'] = en;
     return data;
   }
 }
@@ -193,7 +187,7 @@ class Weekday {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['en'] = this.en;
+    data['en'] = en;
     return data;
   }
 }

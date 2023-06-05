@@ -5,12 +5,11 @@ import 'package:sufi_ishq/presentation/home_screen/controller/home_controller.da
 import 'package:sufi_ishq/presentation/home_screen/model/hijri_date_model.dart';
 import 'package:sufi_ishq/theme/app_style.dart';
 import 'package:sufi_ishq/theme/color_initializer.dart';
-
-import '../../../core/utils/skeleton.dart';
+import 'package:sufi_ishq/core/utils/skeleton.dart';
 
 class HijriCalender extends StatelessWidget {
   HijriCalender(this.model, {Key? key}) : super(key: key);
-  Rx<HijriDateModel> model;
+  final Rx<HijriDateModel> model;
   final HomeController controller = Get.find<HomeController>();
 
   @override
@@ -43,7 +42,7 @@ class HijriCalender extends StatelessWidget {
                         style: AppStyle.txtUbuntuRegular14w500.copyWith(
                             color: getForegroundColor(
                                 ColorInitializer.secondary, context)))
-                    : SizedBox(
+                    : const SizedBox(
                         width: Constant.space50,
                         height: Constant.space20,
                         child: Skeleton(),
@@ -57,7 +56,7 @@ class HijriCalender extends StatelessWidget {
                       style: AppStyle.txtUbuntuRegular18w500.copyWith(
                           color: getForegroundColor(
                               ColorInitializer.secondary, context)))
-                  : SizedBox(
+                  : const SizedBox(
                       width: Constant.space50,
                       height: Constant.space20,
                       child: Skeleton(),
@@ -69,7 +68,7 @@ class HijriCalender extends StatelessWidget {
                       style: AppStyle.txtUbuntuRegular18w500.copyWith(
                           color: getForegroundColor(
                               ColorInitializer.secondary, context)))
-                  : SizedBox(
+                  : const SizedBox(
                       width: Constant.space50,
                       height: Constant.space20,
                       child: Skeleton(),
@@ -82,7 +81,7 @@ class HijriCalender extends StatelessWidget {
                       style: AppStyle.txtUbuntuRegular14w500.copyWith(
                           color: getForegroundColor(
                               ColorInitializer.secondary, context)))
-                  : SizedBox(
+                  : const SizedBox(
                       width: Constant.space50,
                       height: Constant.space20,
                       child: Skeleton(),

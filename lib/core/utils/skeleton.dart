@@ -5,7 +5,7 @@ class Skeleton extends StatefulWidget {
   final double width;
   final double cornerRadius;
 
-  Skeleton({
+  const Skeleton({
     Key? key,
     this.height = 20,
     this.width = 200,
@@ -13,10 +13,10 @@ class Skeleton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SkeletonState createState() => _SkeletonState();
+  SkeletonState createState() => SkeletonState();
 }
 
-class _SkeletonState extends State<Skeleton>
+class SkeletonState extends State<Skeleton>
     with SingleTickerProviderStateMixin {
   AnimationController? _controller;
 
@@ -60,7 +60,7 @@ class _SkeletonState extends State<Skeleton>
         gradient: LinearGradient(
           begin: Alignment(gradientPosition!.value, 0),
           end: const Alignment(-1, 0),
-          colors: [
+          colors: const [
             Color(0x0D000000),
             Color(0x1A000000),
             Color(0x0D000000),
