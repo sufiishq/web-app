@@ -4,6 +4,8 @@ class ImageConstant {
   static const String imgHelp = 'images/help.png';
   static const String imgHome = 'images/home.png';
   static const String imgCassette = 'images/cassette.png';
+  static const String imgAdd = 'images/add.png';
+  static const String imgFavorite = 'images/favorite.png';
   static const String imgLocation = 'images/location.png';
   static const String imgSetting = 'images/setting.png';
   static const String imgShijra = 'images/shijra.png';

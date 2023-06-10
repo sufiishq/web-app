@@ -13,6 +13,10 @@ dependencies:
   drift:
   fluttertoast:
   http:
+  audio_video_progress_bar:
+  just_audio:
+  audio_wave:
+  rxdart:
   flutter_svg:
   floor:
   flutter_lints:
